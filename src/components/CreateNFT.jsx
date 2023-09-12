@@ -3,9 +3,11 @@ import { FaTimes } from "react-icons/fa";
 
 import displayImage from "../assets/hero-img.jpg";
 import { useState } from "react";
+import { setGlobalState, useGlobalState } from "../store";
 
 const CreateNFT = () => {
-  const [showModal, setShowModal] = useState("scale-100");
+  const [createNFTModal] = useGlobalState("createNFTModal");
+
   const [formData, setFormData] = useState({
     title: "",
     price: "",
@@ -63,13 +65,13 @@ const CreateNFT = () => {
   };
 
   const onCloseModalHandler = () => {
-    setShowModal("scale-0");
+    setGlobalState("createNFTModal", "scale-0");
     resetForm();
   };
 
   return (
     <div
-      className={`fixed top-0 left-0 flex items-center justify-center w-screen h-screen transition-transform duration-300 transform bg-black bg-opacity-50 ${showModal}`}
+      className={`fixed top-0 left-0 flex items-center justify-center w-screen h-screen transition-transform duration-300 transform bg-black bg-opacity-50 ${createNFTModal}`}
     >
       <div className="bg-[#151c25] shadow-xl shadow-[#bd068d] rounded-xl w-11/12 sm:w-2/5 h-7/12 p-6">
         <form onSubmit={createNFTHandler}>

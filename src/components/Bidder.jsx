@@ -3,7 +3,7 @@ import heroImg from "../assets/hero-img.jpg";
 
 const Bidder = () => {
   return (
-    <div className="w-full space-y-4 overflow-hidden font-sans text-white bg-gray-800 rounded-md shadow-xl sm:space-y-0 shadow-black md:w-3/5 lg:w-2/5 md:mt-0">
+    <div className="w-full mt-5 overflow-hidden font-sans text-white bg-gray-800 rounded-md shadow-xl sm:space-y-0 shadow-black md:w-3/5 lg:w-2/5 md:mt-0">
       <img src={heroImg} alt="Hero Image" className="object-cover w-full" />
       <div className="shadow-lg shadow-gray-400 border-4 border-[#ffffff36] flex justify-between items-center px-3">
         <div className="p-2">

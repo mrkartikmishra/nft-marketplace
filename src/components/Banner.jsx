@@ -1,5 +1,6 @@
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
+import { setGlobalState } from "../store";
 
 const Banner = () => {
   return (
@@ -15,7 +16,10 @@ const Banner = () => {
         </p>
         <p className="font-light mb-11">& sell, get your NFTs now.</p>
         <div className="flex mb-4">
-          <button className="flex items-center justify-center w-auto p-2 text-sm transition delay-100 bg-green-500 rounded-sm shadow-md hover:bg-green-600 shadow-gray-700">
+          <button
+            onClick={() => setGlobalState("createNFTModal", "scale-100")}
+            className="flex items-center justify-center w-auto p-2 text-sm transition delay-100 bg-green-500 rounded-sm shadow-md hover:bg-green-600 shadow-gray-700"
+          >
             Create NFT
             <BsArrowRightShort />
           </button>
